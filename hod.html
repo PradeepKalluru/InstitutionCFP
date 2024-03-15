@@ -71,14 +71,20 @@
           </form>
         
           <script>
-            document.getElementById("dataForm").addEventListener("submit", function(event) {
-              // Retrieve data from input fields
-              const data1 = document.getElementById('data1').value;
-              const data2 = document.getElementById('data2').value;
-        
-              // Add the data as URL parameters
-              this.action += `?data1=${encodeURIComponent(data1)}&data2=${encodeURIComponent(data2)}`;
-            });
-          </script>
+    function openComparisonPage() {
+      // Get the data entered by the user
+      var inputData = document.getElementById("dataForm").value;
+
+      // Construct the URL of the comparison page
+      // Replace "comparison.html" with the path to your HTML page
+      var comparisonPageURL = "table.html";
+
+      // Optionally, you can pass data to the comparison page by appending it to the URL
+      // Example: comparisonPageURL += "?data=" + encodeURIComponent(inputData);
+
+      // Open the comparison page in a new tab/window
+      window.open(comparisonPageURL, "_blank");
+    }
+  </script>
 </body>
 </html>
