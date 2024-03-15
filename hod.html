@@ -70,15 +70,6 @@
             <input type="submit" value="Compare">
           </form>
         
-          <script>
-            document.getElementById("dataForm").addEventListener("submit", function(event) {
-              // Retrieve data from input fields
-              const data1 = document.getElementById('data1').value;
-              const data2 = document.getElementById('data2').value;
-        
-              // Add the data as URL parameters
-              this.action += `?data1=${encodeURIComponent(data1)}&data2=${encodeURIComponent(data2)}`;
-            });
-          </script>
+          
 </body>
 </html>
