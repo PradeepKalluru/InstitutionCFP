@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .box {
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .box:hover {
+    background-color: #2980b9;
+  }
+  
+  .hidden-container {
+    display: none;
+  }
+  
+  .hidden-container .box {
+    background-color: #2ecc71;
+  }
+  

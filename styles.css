@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .box {
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Remove default link underline */
+    display: block; /* Ensure the link behaves like a block element */
+    margin: 10px; /* Add some margin between the boxes */
+  }
+  
+  .box:hover {
+    background-color: #2980b9;
+  }
+  
+  .hidden-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line on smaller screens */
+  }
+  
+  .hidden-container .box {
+    background-color: #2ecc71;
+    margin: 10px; /* Add some margin between the boxes */
+  }
+  

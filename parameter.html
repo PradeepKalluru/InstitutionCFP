@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institutional Dashboard</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('iae.png'); /* Replace 'your_image.jpg' with the actual file name */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 140px); /* Increased width to accommodate spacing */
+            grid-gap: 140px;
+            padding: 40px; /* Added padding for spacing around the container */
+        }
+
+        .box {
+            width: 100px; /* Adjusted width */
+            height: 80px; /* Adjusted height */
+            background-color: rgb(87, 254, 215); /* Changed to teal color */
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-bottom: 15px;">
+        <input type="text" placeholder="Search..." style="padding: 10px; font-size: 16px;">
+        <button style="padding: 10px; font-size: 16px;">Search</button>
+    </div>
+    <div class="container">
+        <a href="teachingEngagement.html"><div class="box">Teaching Engagement</div></a>
+            <a href="examinationResults.html"> <div class="box">Examination Results</div></a>
+        <a href="TeachingAids.html">  <div class="box">Teaching aids used</div></a>
+        <a href="StudentProjectEngagement.html">  <div class="box">Student project engagement</div></a>
+           
+</body>
+</html>

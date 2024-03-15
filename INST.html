@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institutional Dashboard</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('iae.png'); /* Replace 'your_image.jpg' with the actual file name */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 140px); /* Increased width to accommodate spacing */
+            grid-gap: 140px;
+            padding: 40px; /* Added padding for spacing around the container */
+        }
+
+        .box {
+            width: 100px; /* Adjusted width */
+            height: 80px; /* Adjusted height */
+            background-color: rgb(87, 254, 215); /* Changed to teal color */
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-bottom: 15px;">
+        <input type="text" placeholder="Search..." style="padding: 10px; font-size: 16px;">
+        <button style="padding: 10px; font-size: 16px;">Search</button>
+    </div>
+    <div class="container">
+        <a href="next_page.html"><div class="box">Overall College Score</div></a>
+    
+        <a href="next_page1.html"> <div class="box">Total Departments</div></a>
+        <a href="next_page2.html">  <div class="box">Total Faculty Number</div></a>
+        <a href="next_page3.html">  <div class="box">Total Publications</div></a>
+            <a href="next_page4.html"><div class="box">Total Citations</div></a>
+                <a href="next_page5.html">  <div class="box">IPR</div></a>
+                    <a href="next_page6.html">  <div class="box">Projects and Fundings</div></a>
+                        <a href="next_page7.html">  <div class="box">Average Pass percentage</div></a>
+                            <a href="next_page8.html"> <div class="box">Total no.of Placements</div></a>
+                            <a href="reports.html"> <div class="box">Reports</div></a>
+                            <a href="hod.html"> <div class="box">HOD</div></a>
+    </div>
+</body>
+</html>

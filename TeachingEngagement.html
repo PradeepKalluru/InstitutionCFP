@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching engagement report</title>
+</head>
+<body>
+  <style>
+    /* Add CSS styles for spacing */
+    h1 {
+      margin-bottom: 20px; /* Add margin-bottom to create space between heading and labels */
+    }
+    label {
+      display: block; /* Ensure labels are displayed as block elements */
+      margin-bottom: 10px; /* Add margin-bottom to create space between labels */
+    }
+  </style>
+ <h1> Teaching engagement reports</h1>
+  <label for="academicYear">Select Academic Year:</label>
+  <select id="academicYear" onchange="generateTable()">
+    <option value="" selected disabled>Select an Academic Year</option>
+    <option value="2022-2023">2022-2023</option>
+    <option value="2023-2024">2023-2024</option>
+    <option value="2024-2025">2024-2025</option>
+    <!-- Add more options as needed -->
+  </select>
+  <label for="Program">Select Program:</label>
+  <select id="Program" onchange="generateTable()">
+    <option value="" selected disabled>Select Program</option>
+    <option value="M.Tech">M.Tech</option>
+    <option value="B.Tech">B.Tech</option>
+    
+    <!-- Add more options as needed -->
+  </select>
+
+  <label for="Department">Select Department:</label>
+  <select id="Department" onchange="generateTable()">
+    <option value="" selected disabled>Select Department</option>
+    <option value="CSE">CSE</option>
+    <option value="ECE">ECE</option>
+    <option value="IT">IT</option>
+    <option value="MECH">MECH</option>
+    <!-- Add more options as needed -->
+  </select>
+  <label for="Course Name">Select Course name:</label>
+  <select id="Course Name" onchange="generateTable()">
+    <option value="" selected disabled>Select Course name</option>
+    <option value="JAVA">JAVA</option>
+    <option value="ED">ED</option>
+    <option value="EE">EE</option>
+    <option value="CC">CC</option>
+    <!-- Add more options as needed -->
+  </select>
+
+  <div id="tableContainer">
+    <!-- Table will be generated dynamically here -->
+  </div>
+
+  <script>
+    function generateTable() {
+      const academicYear = document.getElementById('academicYear').value;
+      const tableContainer = document.getElementById('tableContainer');
+      const numRows = 4;
+      const numCols = 10;
+
+      // Define your data array
+      const data = [
+        ["S.no", "Faculty Name", "Designation", "Program", "Department", "Course name", "Mode of teaching", "Hours allotted", "Hours engaged", "Hours engaged percentage"],
+        ["Data 11", "Data 12", "Data 13", "Data 14", "Data 15", "Data 16", "Data 17", "Data 18", "Data 19", "Data 20"],
+        ["Data 21", "Data 22", "Data 23", "Data 24", "Data 25", "Data 26", "Data 27", "Data 28", "Data 29", "Data 30"],
+        ["Data 31", "Data 32", "Data 33", "Data 34", "Data 35", "Data 36", "Data 37", "Data 38", "Data 39", "Data 40"]
+      ];
+
+      
+
+      // Generate the table HTML
+      let tableHTML = '<table border="1">';
+      for (let i = 0; i < numRows; i++) {
+        tableHTML += '<tr>';
+        for (let j = 0; j < numCols; j++) {
+          tableHTML += `<td>${data[i][j]}</td>`;
+        }
+        tableHTML += '</tr>';
+      }
+      tableHTML += '</table>';
+
+      // Set the generated table HTML to the container
+      tableContainer.innerHTML = tableHTML;
+    }
+  </script>
+
+</body>
+</html>

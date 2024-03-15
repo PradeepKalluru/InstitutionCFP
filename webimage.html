@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clickable Image</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+        var imageURL = "D:\ KAB\ CFP\ .vscode\ image.jpg"; // Replace 'your_image_url.jpg' with the URL of your image
+        var clickableAreas = [
+            {x: 100, y: 100, width: 50, height: 50, link: 'https://example.com'},
+            // Add more clickable areas as needed
+        ];
+
+        var image = new Image();
+        image.onload = function() {
+            context.drawImage(image, 0, 0, canvas.width, canvas.height);
+            for (var i = 0; i < clickableAreas.length; i++) {
+                var area = clickableAreas[i];
+                context.fillStyle = 'rgba(255, 0, 0, 0.5)'; // Semi-transparent red
+                context.fillRect(area.x, area.y, area.width, area.height);
+            }
+        };
+        image.src = imageURL;
+
+        canvas.addEventListener('click', function(event) {
+            var rect = canvas.getBoundingClientRect();
+            var mouseX = event.clientX - rect.left;
+            var mouseY = event.clientY - rect.top;
+            for (var i = 0; i < clickableAreas.length; i++) {
+                var area = clickableAreas[i];
+                if (mouseX >= area.x && mouseX <= area.x + area.width &&
+                    mouseY >= area.y && mouseY <= area.y + area.height) {
+                    window.location.href = area.link;
+                    break;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

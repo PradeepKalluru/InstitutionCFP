@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 3 - Colorful Clickable Boxes</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-image: url('iae.png'); /* Replace 'your_background_image.jpg' with the actual file name */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 140px); /* Adjusted width to accommodate spacing */
+            grid-gap: 20px;
+            padding: 20px; /* Added padding for spacing around the container */
+        }
+
+        .box {
+            width: 140px; /* Adjusted width */
+            height: 80px; /* Adjusted height */
+            background-color: lightblue; /* Changed to light blue color */
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+            text-decoration: none; /* Remove default underline for links */
+            color: white; /* Text color */
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="page4.html" class="box">Box 1</a>
+        <a href="page4.html" class="box">Box 2</a>
+        <a href="page4.html" class="box">Box 3</a>
+        <a href="page4.html" class="box">Box 4</a>
+        <a href="page4.html" class="box">Box 5</a>
+        <a href="page4.html" class="box">Box 6</a>
+        <a href="page4.html" class="box">Box 7</a>
+        <a href="page4.html" class="box">Box 8</a>
+        <a href="page4.html" class="box">Box 9</a>
+    </div>
+</body>
+</html>

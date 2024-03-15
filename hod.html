@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institutional Dashboard</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('iae.png'); /* Replace 'your_image.jpg' with the actual file name */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(6, 140px); /* Increased width to accommodate spacing */
+            grid-gap: 40px;
+            padding: 10px; /* Added padding for spacing around the container */
+        }
+
+        .box {
+            width: 140px; /* Adjusted width */
+            height: 80px; /* Adjusted height */
+            background-color: rgb(156, 255, 134); /* Changed to teal color */
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+                    <a href="cseFac.html"> <div class="box">Total Faculty</div></a>
+                    <a href="cseFac.html"> <div class="box">Prof., Assis.prof., Asooc.Prof.</div></a>
+                    <a href="cseFac.html"> <div class="box">Average pass percentage</div></a>
+                    <a href="cseFac.html"> <div class="box">Average Teaching Engagement</div></a>
+                    <a href="cseFac.html"> <div class="box">Total teaching aids used</div></a>
+                    <a href="next_page6.html"> <div class="box">Total research projects</div></a>
+                    <a href="next_page5.html"> <div class="box">Total IPR's</div></a>
+                    <a href="cseFac1.html"> <div class="box">Total Publications</div></a>
+                    <a href="cseFac1.html"> <div class="box">Total papers</div></a>
+                    <a href="cseFac.html"> <div class="box">No.of training programs/FDP</div></a>
+                    <a href="cseFac.html"> <div class="box">No.of memberships</div></a>
+                    <a href="cseFac.html"> <div class="box">Total Contributions</div></a>
+                    <a href="cseFac.html"> <div class="box">Total Achievements</div></a>
+                    
+           </div>
+           <form id="dataForm" action="table.html" method="post" target="_blank">
+            <label for="data1">Data 1:</label>
+            <input type="text" id="data1" name="data1" required><br>
+        
+            <label for="data2">Data 2:</label>
+            <input type="text" id="data2" name="data2" required><br>
+        
+            <input type="submit" value="Compare">
+          </form>
+        
+          <script>
+            document.getElementById("dataForm").addEventListener("submit", function(event) {
+              // Retrieve data from input fields
+              const data1 = document.getElementById('data1').value;
+              const data2 = document.getElementById('data2').value;
+        
+              // Add the data as URL parameters
+              this.action += `?data1=${encodeURIComponent(data1)}&data2=${encodeURIComponent(data2)}`;
+            });
+          </script>
+</body>
+</html>

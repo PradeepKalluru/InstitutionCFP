@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFP</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('iae.png'); /* Replace 'your_image.jpg' with the actual file name */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 140px); /* Increased width to accommodate spacing */
+            grid-gap: 80px;
+            padding: 20px; /* Added padding for spacing around the container */
+        }
+
+        .box {
+            width: 140px; /* Adjusted width */
+            height: 80px; /* Adjusted height */
+            background-color: rgb(145, 247, 119); /* Changed to blue color */
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="csepfac.html">  <div class="box">CSE 55</div></a>
+        <a href="ecepFac.html"> <div class="box">ECE 40</div></a>
+        <a href="mechpFac.html"> <div class="box">MECH 10</div></a>
+        <a href="eeepFac.html"><div class="box">EEE 5</div></a>
+        
+    </div>
+</body>
+</html>
